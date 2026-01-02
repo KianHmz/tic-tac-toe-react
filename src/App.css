@@ -1,0 +1,184 @@
+:root {
+  --clr-white: rgb(255, 255, 255);
+  --clr-black: rgb(0, 0, 0);
+  --clr-dark-grey: rgb(51, 51, 51);
+  --clr-cyan: rgb(0, 204, 255);
+  --clr-pink: rgb(255, 0, 132);
+}
+
+.container {
+  padding-top: 2rem;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.game-info {
+  margin-bottom: 4rem;
+}
+
+.active-player {
+  border: 1px solid var(--clr-white);
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+
+.players {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12rem;
+}
+
+.player-info {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+span.player-name {
+  cursor: pointer;
+}
+
+input.player-name {
+  width: 15rem;
+  padding: 0.7rem;
+  background-color: rgba(255, 255, 255, 0.346);
+  color: var(--clr-white);
+  font-size: 1.5rem;
+  border: none;
+}
+
+.player-symbol {
+  font-family: "Sour Gummy";
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.players :first-child .player-symbol {
+  text-shadow: 0 0 10px var(--clr-white), 0 0 20px var(--clr-cyan),
+    0 0 20px var(--clr-cyan);
+}
+
+.players :last-child .player-symbol{
+  text-shadow: 0 0 10px var(--clr-white), 0 0 20px var(--clr-pink),
+    0 0 20px var(--clr-pink);
+}
+
+.game-board {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  aspect-ratio: 1 / 1;
+  gap: 0.5rem;
+  width: 90%;
+  max-width: 400px;
+  margin-bottom: 3rem;
+}
+
+.cell {
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 2px solid var(--clr-white);
+  border-radius: 15px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+.cell:hover {
+  background-color: rgba(255, 255, 255, 0.136);
+  cursor: pointer;
+}
+
+.cell span {
+  color: var(--clr-white);
+  font-size: 6rem;
+  font-family: "Sour Gummy";
+  font-weight: 500;
+}
+
+.cell span.x,
+.cell span.o {
+  color: var(--clr-white);
+  font-weight: 400;
+}
+
+.cell span.x {
+  text-shadow: 0 0 10px var(--clr-white), 0 0 20px var(--clr-cyan),
+    0 0 20px var(--clr-cyan);
+}
+
+.cell span.o {
+  text-shadow: 0 0 10px var(--clr-white), 0 0 20px var(--clr-pink),
+    0 0 20px var(--clr-pink);
+}
+
+.game-log {
+  line-height: 3rem;
+}
+
+.game-log p {
+  color: var(--clr-white);
+  animation: slideIn 0.6s ease-in-out forwards;
+}
+
+.game-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.overlay-box {
+  background: rgba(255, 255, 255, 0.659);
+  padding: 3rem 4rem;
+  text-align: center;
+  animation: slideIn 1s ease;
+  width: 100vw;
+}
+
+.overlay-box h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: var(--clr-black);
+}
+
+.overlay-box button {
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  background: var(--clr-black);
+  color: var(--clr-white);
+  border-radius: 6px;
+}
+
+.overlay-box button:hover {
+  background: var(--clr-dark-grey);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

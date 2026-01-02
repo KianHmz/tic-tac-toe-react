@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("neon-bg1.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(15px) brightness(0.5);
+  transform: scale(1.1);
+  z-index: -1;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  color: white;
+}
+
+body {
+  font-family: "Ubuntu", "Sour Gummy", sans-serif;
+}
