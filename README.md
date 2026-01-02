@@ -1,16 +1,38 @@
-# React + Vite
+# Tic-Tac-Toe React App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Built with
 
-Currently, two official plugins are available:
+![Love](https://img.shields.io/badge/love<3-red?)
+![Vite](https://img.shields.io/badge/Vite-black?logo=vite)
+![React](https://img.shields.io/badge/React-black?logo=react)
+![JavaScript](https://img.shields.io/badge/JavaScript-black?logo=javascript)
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-black?logo=tailwindcss)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Demo
+![Demo](./src/assets/demo.gif)
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. **Clone the repository**
+```bash
+git clone https://github.com/KianHmz/tic-tac-toe-react.git
 
-## Expanding the ESLint configuration
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+2. **Install dependencies**
+```bash
+cd tic-tac-toe-react
+npm install
+
+```
+
+
+3. **Run the app**
+```bash
+npm run dev
+
+```
+
+
+*The app will open at `http://localhost:5173`.*
